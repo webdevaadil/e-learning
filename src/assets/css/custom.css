@@ -1,0 +1,208 @@
+.login_n{
+     background: #8ec8f6;
+     min-height: 100vh;
+     padding: 30px;
+}
+.vect-img{
+    padding-top: 50px;
+}
+.vect-img img{
+    width: 100%;
+}
+input[type=text], input[type=email], input[type=tel], input[type=number], input[type=password], input[type=url], textarea {
+    height: 45px;
+    border-radius: 6px;
+    margin: 10px 0px;
+    padding-left: 12px;
+}
+.button{
+    background: #cb0e0e;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.sub{
+    text-align: center
+}
+.e-learning{
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+.heads-elearning{
+    text-align: center;
+    padding: 15px 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.heads-elearning h2{
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.elearn-card{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px 0px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.elearn-card img{
+    width: 60px;
+    object-fit: contain;
+    height: 60px;
+}
+.elearn-card p{
+    font-weight: 700;
+    margin-top: 7px;
+}
+
+/*---------------------------------- class 11 page------------------------------------ */
+
+.e11-elearn-card{
+    background-color: #04a5ff78;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px 0px;
+    position: relative;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.e11-elearn-card img{
+    width: auto;
+    object-fit: contain;
+    height: 160px;
+}
+
+.e11-elearn-card p{
+    font-weight: 800;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+
+.e11-elearn-card-2{
+    background-color: #04a5ff78;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px 0px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.e11-elearn-card-2 img{
+    width: auto;
+    object-fit: contain;
+    height: 160px;
+    left: 15px;
+    position: relative;
+}
+
+
+
+.text-center  p {
+    font-weight: 800;
+    font-size: 40px;
+    position: absolute;
+    top: 62%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+  
+  }
+
+
+
+  /*---------------------------- subject css----------------------- */
+
+
+  .elearn-card-1{
+   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 15px 0px;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.elearn-card-1 img{
+    width: 60px;
+    object-fit: contain;
+    height: 50px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+  .card-text h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .card-text p {
+  
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+
+  /*---------------------------------- chapter s css --------------------------------------------*/
+
+  
+
+  .elearn-card-3{
+   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 0px;
+    padding: 15px 0px;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.elearn-card-3 img{
+    width: 60px;
+    object-fit: contain;
+    height: 60px;
+    margin-right: 20px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+
+  .card-text h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .card-text p {
+  
+    font-size: 12px;
+    font-weight: 600;
+
+  }
+  .new-chapters{
+    padding: 0;
+  }
+
+
+
+
+  /* video */
+
+  @media screen and (min-width: 768px){
+    body{
+        display: none;
+    }
+
+  }

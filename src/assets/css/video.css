@@ -1,0 +1,91 @@
+.lightbox {
+    background-color: fade(black, 80%);
+    overflow: scroll;
+    position: fixed;
+    display: none;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: #0000009c !important;
+}
+
+.lightbox .container {
+    position: relative;
+    max-width: 960px;
+    margin: 7% auto;
+    display: block;
+    padding: 0 3%;
+    height: auto;
+    z-index: 10;
+
+
+
+}
+
+.lightbox .-content {
+    box-shadow: 0 1px 6px fade(black, 70%);
+}
+
+.lightbox .-close {
+    text-transform: uppercase;
+    background: transparent;
+    position: absolute;
+    font-weight: 300;
+    font-size: 12px;
+    display: block;
+    border: none;
+    color: white;
+    top: -22px;
+    right: 3%;
+}
+
+.video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    height: 0;
+}
+
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    left: 3%;
+    top: 0px;
+}
+
+/* IGNORE FORM THIS POINT ON */
+
+
+#container {
+    border-radius: 4px;
+    height: auto;
+    padding: 50px;
+    background: white;
+    margin: 50px auto;
+}
+
+
+.lightbox-container {
+    margin-top: 60px;
+
+}
+
+.lightbox-content i {
+    font-size: 20px;
+    margin-left: 10px;
+    color: white;
+    background: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
