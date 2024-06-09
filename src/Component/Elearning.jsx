@@ -47,7 +47,7 @@ export const Elearning = () => {
                   <div className="inner-card">
 
                      <img src={graduate} alt="" srcSet=""/>
-                     <p>className {item.standard}</p>
+                     <p>Class  {item.standard}</p>
 
                   </div>
 

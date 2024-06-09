@@ -23,10 +23,22 @@ const Question = (props) => {
     selectedAnswer,
     setSelectedAnswer,
   } = props;
+  const [recordanswer, setRecordanswer] = useState();
   const handleOptionChange = (value, qnos) => {
     setSelectedAnswer(value);
     checkvalue(qnos, value);
+    console.log(qnos);
+    if (qnos <= qno) {
+      setRecordanswer((recordanswer) => {
+        return { ...recordanswer, [`${qnos}`]: value };
+      });
+    }
   };
+  useEffect(() => {
+    setSelectedAnswer(recordanswer?.[qno]);
+  }, [qno, recordanswer]);
+  console.log(recordanswer);
+  console.log(qno);
 
   const [rightans, setRightans] = useState(0);
   const getAnswerClass = (option) => {
@@ -112,10 +124,9 @@ export const Test = () => {
     setLoadingani(false);
     setTimeout(() => {
       setLoadingani(true);
-      setSelectedAnswer(null)
+      // setSelectedAnswer(null);
       setqeno(qeno + 1);
     }, 1000);
-console.log(state);
     testsns();
     return;
     if (cv) {
@@ -150,21 +161,18 @@ console.log(state);
       setcorrectans(correctCount);
     }
   };
-  const [qeno, setqeno] = useState(0);
+  const [qeno, setqeno] = useState(1);
+  console.log(qeno);
   const cra = () => {
     const data = Object.keys(cv).filter((item, index) => {
       return item == qeno + 1;
     });
-    console.log(cv);
-    console.log(selectedAnswer);
     setSelectedAnswer(cv.que);
   };
 
-  
-  console.log(selectedAnswer);
-
   const [loading, setloading] = useState(false);
   const navi = useNavigate();
+  console.log(state);
   return (
     <div className="e-learning">
       <div
@@ -189,7 +197,7 @@ console.log(state);
               alignItems: "center",
             }}
           >
-            {qeno == 0 ? (
+            {qeno == 1 || (state && qeno > state.length) ? (
               ""
             ) : (
               <img
@@ -197,16 +205,16 @@ console.log(state);
                 src={play}
                 style={{ position: "absolute", left: "20px" }}
                 onClick={() => {
-    // cra()
-    setqeno(qeno - 1)
+                  // cra()
+                  setqeno(qeno - 1);
                 }}
               />
             )}
             <div className="study-cards">
-              {state && state.length >= qeno + 1 ? (
+              {state && state.length >= qeno ? (
                 state &&
                 state.map((item) => {
-                  return item.queNo == qeno + 1 ? (
+                  return item.queNo == qeno ? (
                     <Question
                       showAnswer={showAnswer}
                       qno={item.queNo}
@@ -224,18 +232,21 @@ console.log(state);
                   );
                 })
               ) : (
-                <div className="elearn-card-3">
+                <div className="elearn-card-3" style={{ textAlign: "center" }}>
                   <div className="inner-card-3">
-                    <p>Test Result</p>
+                    <h5 style={{ fontSize: "30px" }}>Test Result</h5>
                     <img src={bookstack} alt="" />
-                    <h4>YOUR SCORE</h4>
-                    {correctans} /{state.length}
+                    <h5>YOUR SCORE</h5>
+                    <h4>
+                      {" "}
+                      {correctans} /{state.length}
+                    </h4>
                   </div>
                 </div>
               )}
             </div>
 
-            {state && state.length >= qeno + 1 ? (
+            {state && state.length >= qeno ? (
               <button
                 onClick={submitform}
                 style={{
@@ -253,11 +264,12 @@ console.log(state);
               <>
                 <button
                   onClick={() => {
-                    navi("/Test");
+                   setqeno(1)
+                   setCv('')
                   }}
                   style={{
-                    width: "60px",
-                    height: "30px",
+                    width: "90px",
+                    height: "35px",
                     borderRadius: "20px",
                     backgroundColor: "#4FC3F7",
                     marginTop: "10px",
@@ -267,10 +279,12 @@ console.log(state);
                   Try again
                 </button>
                 <button
-                  onClick={submitform}
+                   onClick={() => {
+                    navi('/board')
+                   }}
                   style={{
-                    width: "60px",
-                    height: "30px",
+                    width: "90px",
+                    height: "35px",
                     borderRadius: "20px",
                     backgroundColor: "rgb(75 175 48)",
                     marginTop: "10px",
