@@ -93,7 +93,7 @@ const Question = (props) => {
                             handleOptionChange(opt.ansName, qno);
                           }}
                         />
-                        {opt.ans}
+                       <p> {opt.ans}</p>
                       </label>
                     </div>
                   </>
@@ -174,7 +174,7 @@ export const Test = () => {
   const navi = useNavigate();
   console.log(state);
   return (
-    <div className="e-learning">
+    <div className="e-learning mocktest-questions">
       <div
         id="loading"
         style={{ display: loading == false ? "none" : "block" }}
@@ -184,23 +184,19 @@ export const Test = () => {
         </div>
       </div>
       <div className="heads-elearning">
-        <h2>Tests</h2>
+        <h2>Test</h2>
       </div>
 
       <div className="container new-chapters">
         <div className="row">
           <div
             className="col-12"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
+       
           >
             {qeno == 1 || (state && qeno > state.length) ? (
               ""
             ) : (
-              <img
+              <img className="backimages"
                 width={"14px"}
                 src={play}
                 style={{ position: "absolute", left: "20px" }}
@@ -232,8 +228,8 @@ export const Test = () => {
                   );
                 })
               ) : (
-                <div className="elearn-card-3" style={{ textAlign: "center" }}>
-                  <div className="inner-card-3">
+                <div className="elearn-card-3 results-card" style={{ textAlign: "center" }}>
+                  <div className="inner-card-3 results-heads">
                     <h5 style={{ fontSize: "30px" }}>Test Result</h5>
                     <img src={bookstack} alt="" />
                     <h5>YOUR SCORE</h5>

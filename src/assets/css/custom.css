@@ -194,9 +194,68 @@ input[type=text], input[type=email], input[type=tel], input[type=number], input[
   .new-chapters{
     padding: 0;
   }
+  .mocktest-questions .new-chapters .question .elearn-card-3 .inner-card-3 ul form{
+    margin-top: 20px;
+  }
 
+.mocktest-questions .new-chapters .question .elearn-card-3 .inner-card-3 ul .checkbox{
+    margin: 10px 0px;
+    font-size: 16px;
+    width: 100%;
+}
+.mocktest-questions .new-chapters .question .elearn-card-3 .inner-card-3 ul .checkbox input{
+    margin-right: 10px;
 
-
+}
+.mocktest-questions .new-chapters .question .elearn-card-3 .inner-card-3 ul .checkbox label{
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+.mocktest-questions .new-chapters .question .elearn-card-3{
+    display: inline-block !important;
+}
+.mocktest-questions .new-chapters .question .elearn-card-3 {
+    box-shadow: none;
+}
+.mocktest-questions .new-chapters button{
+    width: 85% !important;
+    height: auto !important;
+    border-radius: 20px !important;
+    background-color: rgb(79, 195, 247);
+    margin-top: 25px !important;
+    color: white !important;
+    padding: 4px 80px !important;
+    display: block;
+    margin: auto;
+}
+.study-cards .results-card{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.study-cards .results-card h5{
+    font-size: 25px !important;
+}
+.study-cards .results-card img ~ h5{
+    font-size: 19px !important;
+    margin: 15px;
+}
+.new-chapters .backimages{
+    position: relative !important;
+    margin: 20px 0px 0px 0px !important;
+    left: 0px !important;
+    width: 20px;
+    object-fit: contain;
+}
+.results-head img{
+    width: 60px !important;
+    object-fit: contain;
+    height: 60px !important;
+    margin: 10px 0px !important;
+    padding: 0px !important;
+    margin-left: 0px !important;
+}
 
   /* video */
 
